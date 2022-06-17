@@ -15,3 +15,5 @@ jobs:
           registry: ${{ secrets.registry }}
           image: spring-petclinic-kaniko
           repository: ${{ secrets.repository }}
+          folder: .
+          dockerfile: Dockerfile 
