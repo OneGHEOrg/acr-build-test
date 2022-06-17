@@ -17,3 +17,4 @@ jobs:
           repository: ${{ secrets.repository }}
           folder: .
           dockerfile: Dockerfile 
+          branch: main
