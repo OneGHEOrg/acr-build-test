@@ -13,5 +13,5 @@ jobs:
           service_principal_password: ${{ secrets.service_principal_password }}
           tenant: ${{ secrets.tenant }}
           registry: ${{ secrets.registry }}
-          image: cwai96/spring-petclinic-kaniko
+          image: spring-petclinic-kaniko
           repository: ${{ secrets.repository }}
