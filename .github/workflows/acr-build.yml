@@ -1,0 +1,17 @@
+name: ACR Build
+on:
+  push
+jobs:
+  build:
+    runs-on: [self-hosted, aks, kubernetes]
+    steps:
+      - name: ACR build
+        id: acr
+        uses: azure/acr-build@v1
+        with:
+          service_principal: ${{ secrets.service_principal }}
+          service_principal_password: ${{ secrets.service_principal_password }}
+          tenant: ${{ secrets.tenant }}
+          registry: ${{ secrets.registry }}
+          image: cwai96/spring-petclinic-kaniko
+          repository: ${{ secrets.repository }}
